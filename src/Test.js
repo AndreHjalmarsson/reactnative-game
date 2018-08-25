@@ -5,7 +5,7 @@ export default class Test extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Open up Test.js to start working on your Test!</Text>
+        <Text>Open up Test.js to start working on your Test!!</Text>
       </View>
     );
   }
