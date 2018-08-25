@@ -1,13 +1,20 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Test from './src/Test';
+import { createStackNavigator } from 'react-navigation';
+
+import Root from './src/Root';
+import User from './src/User';
+
+const RootStack = createStackNavigator({
+  RootScreen: Root,
+  UserScreen: User
+});
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Test />
+        <RootStack />;
       </View>
     );
   }
@@ -15,9 +22,6 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: 'orange',
-    alignItems: 'center',
-    justifyContent: 'center'
+    flex: 1
   }
 });
