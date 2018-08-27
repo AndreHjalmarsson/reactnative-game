@@ -1,13 +1,22 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
+import { createStackNavigator } from 'react-navigation';
+
+import User from './components/User';
+import Test from './components/Test';
+import LoginForm from './components/LoginForm';
+
+const RootStack = createStackNavigator(
+  {
+    User: User,
+    Test: Test
+  },
+  { initialRouteName: 'User' }
+);
 
 export default class Root extends React.Component {
   render() {
-    return (
-      <View style={styles.container}>
-        <Text>Open up Test.js to start working on your Test!</Text>
-      </View>
-    );
+    return <RootStack />;
   }
 }
 
