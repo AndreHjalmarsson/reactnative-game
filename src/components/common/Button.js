@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default class Test extends React.Component {
+export class Button extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>A Test</Text>
+        <Text>Button</Text>
       </View>
     );
   }
@@ -13,9 +13,12 @@ export default class Test extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: 'orange',
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    backgroundColor: '#B2FF59',
+    padding: 5,
+    height: 30,
+    borderRadius: 5
+    // overflow: 'hidden',
   }
 });

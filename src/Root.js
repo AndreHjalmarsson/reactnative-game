@@ -4,14 +4,15 @@ import { createStackNavigator } from 'react-navigation';
 
 import User from './components/User';
 import Test from './components/Test';
-import LoginForm from './components/LoginForm';
+import Welcome from './components/Welcome';
 
 const RootStack = createStackNavigator(
   {
-    User: User,
-    Test: Test
+    User,
+    Test,
+    Welcome
   },
-  { initialRouteName: 'User' }
+  { initialRouteName: 'Welcome' }
 );
 
 export default class Root extends React.Component {
@@ -25,7 +26,6 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'green',
     alignItems: 'center',
-    justifyContent: 'center',
-    width: '100%'
+    justifyContent: 'center'
   }
 });
