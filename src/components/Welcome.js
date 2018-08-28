@@ -7,8 +7,8 @@ export default class Welcome extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Hello</Text>
-        <Button />
+        <Text>Welcome</Text>
+        <Button title={'Sign in'} onPress={() => console.log('hi')} innerStyle={{ color: 'white', fontSize: 20 }} />
       </View>
     );
   }

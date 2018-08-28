@@ -1,24 +1,31 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
+import { StyleSheet, Text, TouchableOpacity, ViewPropTypes } from 'react-native';
 
-export class Button extends React.Component {
+export class Button extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Button</Text>
-      </View>
+      <TouchableOpacity
+        style={this.props.containerStyle ? this.props.containerStyle : styles.container}
+        onPress={this.props.onPress}
+      >
+        <Text style={this.props.innerStyle ? this.props.innerStyle : styles.inner}>{this.props.title}</Text>
+      </TouchableOpacity>
     );
   }
 }
 
 const styles = StyleSheet.create({
   container: {
+    backgroundColor: 'aqua',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#B2FF59',
-    padding: 5,
-    height: 30,
-    borderRadius: 5
-    // overflow: 'hidden',
+    height: 45,
+    width: 60,
+    overflow: 'hidden',
+    borderRadius: 4
+  },
+  inner: {
+    color: 'black'
   }
 });
