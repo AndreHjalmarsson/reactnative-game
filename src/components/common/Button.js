@@ -7,7 +7,7 @@ export class Button extends Component {
     return (
       <TouchableOpacity
         style={this.props.containerStyle ? this.props.containerStyle : styles.container}
-        onPress={this.props.onPress}
+        onPress={this.props.onPress()}
       >
         <Text style={this.props.innerStyle ? this.props.innerStyle : styles.inner}>{this.props.title}</Text>
       </TouchableOpacity>
