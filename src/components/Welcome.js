@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, TextInput } from 'react-native';
 import firebase from 'firebase';
+import { connect } from 'react-redux';
 
 import { Button } from './common';
+import * as actionCreators from '../actions';
 
-export default class Welcome extends Component {
+class Welcome extends Component {
   constructor() {
     super();
 
@@ -32,14 +34,25 @@ export default class Welcome extends Component {
         />
         <Button
           title={'Sign in'}
-          onPress={() => this.onButtonPress.bind(this)}
+          onPress={() => this.props.onLoginButtonPress(this.state.email, this.state.password)}
           innerStyle={{ color: 'white', fontSize: 20 }}
         />
-        <Text>{this.state.err}</Text>
+        <Text>{this.props.authError}</Text>
       </View>
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    authError: state.auth.auth_error
+  };
+}
+
+export default connect(
+  mapStateToProps,
+  actionCreators
+)(Welcome);
 
 const styles = StyleSheet.create({
   container: {

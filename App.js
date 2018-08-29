@@ -1,8 +1,15 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import firebase from 'firebase';
+import { createStore, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import reduxThunk from 'redux-thunk';
 
 import Root from './src/Root';
+import reducers from './src/reducers';
+
+const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
+const store = createStoreWithMiddleware(reducers);
 
 export default class App extends React.Component {
   componentWillMount() {
@@ -18,9 +25,11 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <Root />;
-      </View>
+      <Provider store={store}>
+        <View style={styles.container}>
+          <Root />;
+        </View>
+      </Provider>
     );
   }
 }
