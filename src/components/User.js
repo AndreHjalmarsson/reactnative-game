@@ -1,7 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
+import { connect } from 'react-redux';
 
-export default class User extends React.Component {
+import * as actionCreators from '../actions';
+
+class User extends React.Component {
   render() {
     return (
       <View style={styles.container}>
@@ -9,11 +12,16 @@ export default class User extends React.Component {
         <Text>A USER</Text>
         <Text>A USER</Text>
         <Text>A USER</Text>
-        <Button title="Go to Details" onPress={() => this.props.navigation.navigate('Test')} />
+        <Button title="Go to Details" onPress={() => this.props.logOut()} />
       </View>
     );
   }
 }
+
+export default connect(
+  null,
+  actionCreators
+)(User);
 
 const styles = StyleSheet.create({
   container: {
