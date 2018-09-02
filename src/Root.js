@@ -2,17 +2,15 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 
-import User from './components/User';
 import Test from './components/Test';
-import Welcome from './components/Welcome';
+import RootScreen from './components/RootScreen';
 
 const RootStack = createStackNavigator(
   {
-    User,
     Test,
-    Welcome
+    RootScreen
   },
-  { initialRouteName: 'Welcome' }
+  { initialRouteName: 'RootScreen' }
 );
 
 export default class Root extends React.Component {
