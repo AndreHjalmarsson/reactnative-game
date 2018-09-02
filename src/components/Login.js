@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { Button } from './common';
 import * as actionCreators from '../actions';
 
-class Welcome extends Component {
+class Login extends Component {
   constructor() {
     super();
 
@@ -52,7 +52,7 @@ function mapStateToProps(state) {
 export default connect(
   mapStateToProps,
   actionCreators
-)(Welcome);
+)(Login);
 
 const styles = StyleSheet.create({
   container: {
