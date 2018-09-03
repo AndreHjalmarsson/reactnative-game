@@ -5,7 +5,7 @@ export default function(state = {}, action) {
     case AUTH_USER_FAILED:
       return { ...state, auth_error: 'Inloggning misslyckades' };
     case AUTH_USER:
-      return { ...state, authed: true };
+      return { ...state, currentUser: action.payload, authed: true };
     case UNAUTH_USER:
       return { ...state, authed: false };
   }
