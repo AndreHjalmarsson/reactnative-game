@@ -1,25 +1,40 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
 import { connect } from 'react-redux';
 
 import * as actionCreators from '../actions';
 
 class User extends React.Component {
+  constructor() {
+    super();
+    this.state = { text: '' };
+  }
   render() {
     return (
       <View style={styles.container}>
-        <Text>A USER</Text>
-        <Text>A USER</Text>
-        <Text>A USER</Text>
-        <Text>A USER</Text>
-        <Button title="Go to Details" onPress={() => this.props.logOut()} />
+        <TextInput
+          style={styles.textField}
+          placeholder="Value"
+          value={this.state.text}
+          onChangeText={text => this.setState({ text })}
+          secureTextEntry={true}
+          autoCorrect={false}
+        />
+        <Button title="Send" onPress={() => this.props.createCharacterName(this.state.text)} />
+        <Button title="Log out" onPress={() => this.props.logOut()} />
       </View>
     );
   }
 }
 
+function mapStateToProps(state) {
+  return {
+    currentUser: state.auth.currentUser
+  };
+}
+
 export default connect(
-  null,
+  mapStateToProps,
   actionCreators
 )(User);
 
@@ -29,5 +44,15 @@ const styles = StyleSheet.create({
     backgroundColor: 'orange',
     alignItems: 'center',
     justifyContent: 'center'
+  },
+  textField: {
+    borderColor: 'white',
+    width: '60%',
+    marginBottom: 10,
+    height: 40,
+    textAlign: 'center',
+    borderWidth: 1,
+    backgroundColor: 'white',
+    borderRadius: 40
   }
 });
