@@ -17,6 +17,11 @@ class Login extends Component {
     return (
       <View style={styles.container}>
         <Text>Continue with...</Text>
+        <Button
+          title={'Facebook'}
+          onPress={() => this.props.onLoginWithFacebookButtonPress()}
+          innerStyle={{ color: 'white', fontSize: 20 }}
+        />
         <TextInput
           style={styles.textField}
           placeholder="EMAIL"

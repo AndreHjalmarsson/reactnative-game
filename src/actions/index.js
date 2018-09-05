@@ -44,3 +44,24 @@ export function createCharacterName(name) {
       .push(name);
   };
 }
+
+export function onLoginWithFacebookButtonPress() {
+  return async dispatch => {
+    const { type, token } = await Expo.Facebook.logInWithReadPermissionsAsync('1133428303477400', {
+      permissions: ['public_profile', 'email']
+    });
+
+    console.log(type);
+
+    if (type === 'success') {
+      const credential = firebase.auth.FacebookAuthProvider.credential(token);
+
+      firebase
+        .auth()
+        .signInAndRetrieveDataWithCredential(credential)
+        .catch(error => {
+          console.log(error);
+        });
+    }
+  };
+}
