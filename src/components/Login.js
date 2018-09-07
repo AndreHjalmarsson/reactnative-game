@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet, TextInput } from 'react-native';
 import firebase from 'firebase';
 import { connect } from 'react-redux';
+import { FBLogin, FBLoginManager } from 'react-native-facebook-login';
 
 import { Button } from './common';
 import * as actionCreators from '../actions';
@@ -16,12 +17,12 @@ class Login extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Continue with...</Text>
-        <Button
-          title={'Facebook'}
-          onPress={() => this.props.onLoginWithFacebookButtonPress()}
-          innerStyle={{ color: 'white', fontSize: 20 }}
+        <FBLogin
+          loginBehavior={FBLoginManager.LoginBehaviors.Web}
+          permissions={['email']}
+          onLogin={data => this.props.onLoginWithFacebookButtonPress(data)}
         />
+        ;
         <TextInput
           style={styles.textField}
           placeholder="EMAIL"
@@ -40,7 +41,7 @@ class Login extends Component {
         <Button
           title={'Sign in'}
           onPress={() => this.props.onLoginButtonPress(this.state.email, this.state.password)}
-          innerStyle={{ color: 'white', fontSize: 20 }}
+          innerStyle={{ color: 'black', fontSize: 20 }}
         />
         <Text>{this.props.authError}</Text>
       </View>

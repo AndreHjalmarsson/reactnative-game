@@ -1,6 +1,6 @@
 import firebase from 'firebase';
 
-import { AUTH_USER, UNAUTH_USER, AUTH_USER_FAILED } from './types';
+import { AUTH_USER, UNAUTH_USER, AUTH_USER_FAILED, FB_AUTHED, EMAIL_AUTHED, EMAIL_UNAUTHED } from './types';
 
 export function onLoginButtonPress(email, password) {
   return dispatch => {
@@ -14,7 +14,9 @@ export function onLoginButtonPress(email, password) {
           .catch(() => {
             dispatch({ type: AUTH_USER_FAILED });
           });
+        dispatch({ type: EMAIL_AUTHED });
       });
+    dispatch({ type: EMAIL_AUTHED });
   };
 }
 
@@ -45,23 +47,15 @@ export function createCharacterName(name) {
   };
 }
 
-export function onLoginWithFacebookButtonPress() {
+export function onLoginWithFacebookButtonPress(data) {
   return async dispatch => {
-    const { type, token } = await Expo.Facebook.logInWithReadPermissionsAsync('1133428303477400', {
-      permissions: ['public_profile', 'email']
-    });
-
-    console.log(type);
-
-    if (type === 'success') {
-      const credential = firebase.auth.FacebookAuthProvider.credential(token);
-
-      firebase
-        .auth()
-        .signInAndRetrieveDataWithCredential(credential)
-        .catch(error => {
-          console.log(error);
-        });
-    }
+    const credential = await firebase.auth.FacebookAuthProvider.credential(data.credentials.token);
+    firebase
+      .auth()
+      .signInAndRetrieveDataWithCredential(credential)
+      .catch(error => {
+        console.log(error);
+      });
+    dispatch({ type: FB_AUTHED });
   };
 }

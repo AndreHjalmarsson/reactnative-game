@@ -1,0 +1,28 @@
+dependencies: \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTModuleMethod.mm \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTModuleMethod.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTBridgeMethod.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTNullability.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTBridge+Private.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTConvert.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Views/RCTAnimationType.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Views/RCTBorderStyle.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Views/RCTPointerEvents.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Views/RCTTextDecorationLineType.h \
+  /Users/andre/Documents/Code/mrdam/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/andre/Documents/Code/mrdam/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/andre/Documents/Code/mrdam/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTCxxConvert.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTManagedPointer.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTParserUtils.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Profiler/RCTProfile.h

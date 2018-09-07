@@ -1,0 +1,36 @@
+dependencies: \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTRootView.m \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTRootView.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTJavaScriptLoader.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTRootViewDelegate.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTRootViewInternal.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTBridge+Private.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTEventDispatcher.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTKeyCommands.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTPerformanceLogger.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Profiler/RCTProfile.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTRootContentView.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Views/RCTView.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Views/RCTBorderStyle.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Views/RCTComponent.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Views/RCTPointerEvents.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTTouchHandler.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Modules/RCTUIManager.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Views/RCTViewManager.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Base/RCTConvert.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Views/RCTAnimationType.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Views/RCTTextDecorationLineType.h \
+  /Users/andre/Documents/Code/mrdam/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/andre/Documents/Code/mrdam/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/andre/Documents/Code/mrdam/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Views/UIView+React.h \
+  /Users/andre/Documents/Code/mrdam/node_modules/react-native/React/Modules/RCTUIManagerUtils.h

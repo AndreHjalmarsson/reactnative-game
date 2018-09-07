@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
 import { connect } from 'react-redux';
+import { FBLogin, FBLoginManager } from 'react-native-facebook-login';
 
 import * as actionCreators from '../actions';
 
@@ -9,6 +10,16 @@ class User extends React.Component {
     super();
     this.state = { text: '' };
   }
+
+  renderLogout() {
+    const { email_authed, fb_authed } = this.props;
+    if (email_authed === true) {
+      return <Button title="Log out" onPress={() => this.props.logOut()} />;
+    } else if (fb_authed === true) {
+      return <FBLogin onLogout={() => this.props.logOut()} />;
+    }
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -21,7 +32,7 @@ class User extends React.Component {
           autoCorrect={false}
         />
         <Button title="Send" onPress={() => this.props.createCharacterName(this.state.text)} />
-        <Button title="Log out" onPress={() => this.props.logOut()} />
+        {this.renderLogout()}
       </View>
     );
   }
@@ -29,7 +40,9 @@ class User extends React.Component {
 
 function mapStateToProps(state) {
   return {
-    currentUser: state.auth.currentUser
+    currentUser: state.auth.currentUser,
+    email_authed: state.auth.email_authed,
+    fb_authed: state.auth.fb_authed
   };
 }
 
